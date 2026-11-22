@@ -47,17 +47,62 @@ namespace C__Basics_Session03
             #region question 5
             //Given string title = "Clean Code"; and int pages = 464;, build the sentence "Book: Clean Code,
             //Pages: 464" using the + operator.
-            String title = "Clean Code";
-            int pages = 464;
-            Console.WriteLine("Book : " + title + " , pages : " + pages);
+            //String title = "Clean Code";
+            //int pages = 464;
+            //Console.WriteLine("Book : " + title + " , pages : " + pages);
             #endregion
             #region question 6
             //Build the same sentence as above, but using string interpolation ($"...").
-            Console.WriteLine($"book : {title} , pages : {pages}");
+            //Console.WriteLine($"book : {title} , pages : {pages}");
             #endregion
             #region question 7
             //Build the same sentence as above, but using string interpolation ($"...").
-            Console.WriteLine("book : {0} , pages : {1}", title, pages);
+            //Console.WriteLine("book : {0} , pages : {1}", title, pages);
+            #endregion
+            #region question 8
+            //Given int pages = 464;, write an if / else statement that prints "Long Book" if pages is greater than
+            //300, otherwise prints "Short Book".
+            int pages = 464; 
+            if(pages > 300)
+            {
+                Console.WriteLine("long book");
+            }
+            else
+            {
+                Console.WriteLine("short book");
+            }
+            #endregion
+            #region question 9
+            //Given int pages = 464; and bool isAvailable = true;, print "You can borrow this book" only if pages is
+            //greater than 300 and isAvailable is true.Use the && operator.
+            bool isAvailable = true;
+            if(pages > 300 && isAvailable == true)
+            {
+                Console.WriteLine("You can borrow this book");
+            }
+            #endregion
+            #region question 10
+            //Given string title = "Refactoring";, write a switch statement that prints "Great choice!" if the title is
+            //"Clean Code", "Nice pick!" if it's "Refactoring", and "Never heard of it" for anything else.
+            String title = "Refactoring";
+            switch(title)
+            {
+                case "Clean Code":
+                case "Nice pick":
+                    Console.WriteLine("Great Choice!");
+                    break;
+                case "Refactoring":
+                default:
+                    Console.WriteLine("Never heard of it");
+                    break;
+            }
+            #endregion
+            #region question 11 
+            //Given int pages = 464;, use the ternary operator to store "Long Book" or "Short Book" into a
+            //variable sizeLabel(same rule as question 8: long if pages > 300).
+
+            String sizelable = (pages > 300) ? "long book" : "short book";
+            Console.WriteLine(sizelable);
             #endregion
 
 
