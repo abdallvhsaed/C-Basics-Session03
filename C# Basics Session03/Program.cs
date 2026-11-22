@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Channels;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C__Basics_Session03
 {
@@ -62,49 +63,111 @@ namespace C__Basics_Session03
             #region question 8
             //Given int pages = 464;, write an if / else statement that prints "Long Book" if pages is greater than
             //300, otherwise prints "Short Book".
-            int pages = 464; 
-            if(pages > 300)
-            {
-                Console.WriteLine("long book");
-            }
-            else
-            {
-                Console.WriteLine("short book");
-            }
+            //int pages = 464; 
+            //if(pages > 300)
+            //{
+            //    Console.WriteLine("long book");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("short book");
+            //}
             #endregion
             #region question 9
             //Given int pages = 464; and bool isAvailable = true;, print "You can borrow this book" only if pages is
             //greater than 300 and isAvailable is true.Use the && operator.
-            bool isAvailable = true;
-            if(pages > 300 && isAvailable == true)
-            {
-                Console.WriteLine("You can borrow this book");
-            }
+            //bool isAvailable = true;
+            //if(pages > 300 && isAvailable == true)
+            //{
+            //    Console.WriteLine("You can borrow this book");
+            //}
             #endregion
             #region question 10
             //Given string title = "Refactoring";, write a switch statement that prints "Great choice!" if the title is
             //"Clean Code", "Nice pick!" if it's "Refactoring", and "Never heard of it" for anything else.
-            String title = "Refactoring";
-            switch(title)
-            {
-                case "Clean Code":
-                case "Nice pick":
-                    Console.WriteLine("Great Choice!");
-                    break;
-                case "Refactoring":
-                default:
-                    Console.WriteLine("Never heard of it");
-                    break;
-            }
+            //String title = "Refactoring";
+            //switch(title)
+            //{
+            //    case "Clean Code":
+            //    case "Nice pick":
+            //        Console.WriteLine("Great Choice!");
+            //        break;
+            //    case "Refactoring":
+            //    default:
+            //        Console.WriteLine("Never heard of it");
+            //        break;
+            //}
             #endregion
             #region question 11 
             //Given int pages = 464;, use the ternary operator to store "Long Book" or "Short Book" into a
             //variable sizeLabel(same rule as question 8: long if pages > 300).
 
-            String sizelable = (pages > 300) ? "long book" : "short book";
-            Console.WriteLine(sizelable);
+            //String sizelable = (pages > 300) ? "long book" : "short book";
+            //Console.WriteLine(sizelable);
             #endregion
+            #region question 12
+            //Given string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };, use a for loop
+            //to print each book with its position number, like 1.Clean Code.
+            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            for(int i = 0; i<books.Length; i++)
+            {
+                Console.WriteLine($"books[{i}] = {books[i]}");
+            }
 
+            #endregion
+            #region question 13
+            //Using the same books array, use a while loop to print every book title.
+            int j = 0;
+            while(j<books.Length)
+            {
+                Console.WriteLine($"books[{j}] = {books[j]}");
+                j++;
+            }
+            #endregion
+            #region question 14
+            //Write a do-while loop that prints "Checking book..." exactly 3 times
+            int k = 0;
+            do
+            {
+                Console.WriteLine("cheaking book");
+                k++;
+
+            } while (k<3);
+            #endregion
+            #region question 15
+            //Using the same books array, use a foreach loop to print every book title
+            
+            
+            #endregion
+            #region question 16
+            //Using the same books array, loop through it and print each title, but stop completely (break) once
+            //you reach "Refactoring".
+            for (int i = 0; i < books.Length; i++)
+            {
+                if (books[i] == "Refactoring")
+                {
+                    break;
+
+                }
+               
+                Console.WriteLine($"books[{i}] = {books[i]}");
+            }
+
+            #endregion
+            #region question 17
+            //Using the same books array, print every title except "The Pragmatic Programmer" (skip it with
+            //continue, don't stop the loop).
+            for (int i = 0; i < books.Length; i++)
+            {
+                if (books[i] == "The Pragmatic Programmer")
+                {
+                    continue;
+
+                }
+
+                Console.WriteLine($"books[{i}] = {books[i]}");
+            }
+            #endregion
 
         }
     }
