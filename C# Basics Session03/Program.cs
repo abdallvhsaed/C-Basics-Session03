@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.Drawing;
+using System.Security.Cryptography;
 using System.Threading.Channels;
 
 namespace C__Basics_Session03
@@ -10,10 +11,18 @@ namespace C__Basics_Session03
             #region question 1
             //Declare string title = "clean code";. Call title.ToUpper() and store it in a new variable upperTitle. Print
             //both title and upperTitle to show that title did not change.
-            string title = "clean code";
-            String upperTitle = title.ToUpper();
-            Console.WriteLine($"title = {title}  ,  upperTitle = {upperTitle}");
+            //string title = "clean code";
+            //String upperTitle = title.ToUpper();
+            //Console.WriteLine($"title = {title}  ,  upperTitle = {upperTitle}");
 
+
+            #endregion
+            #region question 2
+            //Declare two separate string variables, both set to the literal "Clean Code".Use ReferenceEquals()
+            //to check if they point to the same object in memory.
+            String s1 = "Clean Code";
+            String s2 = "Clean Code";
+            Console.WriteLine(object.ReferenceEquals(s1, s2)); //true
 
             #endregion
         }
