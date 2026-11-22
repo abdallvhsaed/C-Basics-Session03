@@ -51,6 +51,15 @@ namespace C__Basics_Session03
             int pages = 464;
             Console.WriteLine("Book : " + title + " , pages : " + pages);
             #endregion
+            #region question 6
+            //Build the same sentence as above, but using string interpolation ($"...").
+            Console.WriteLine($"book : {title} , pages : {pages}");
+            #endregion
+            #region question 7
+            //Build the same sentence as above, but using string interpolation ($"...").
+            Console.WriteLine("book : {0} , pages : {1}", title, pages);
+            #endregion
+
 
         }
     }
